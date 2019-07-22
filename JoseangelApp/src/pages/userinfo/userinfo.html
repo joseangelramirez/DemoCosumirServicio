@@ -1,0 +1,51 @@
+<!--
+  Generated template for the UserinfoPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Informacion de Usuario</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item no-line text-center>
+      <ion-img [src]="InfoUser[1].large"></ion-img>
+    </ion-item>
+    <ion-item no-line>
+      <ion-label>
+        <h1>{{InfoUser[0].first| titlecase }} {{InfoUser[0].last | titlecase }}</h1>
+        <h2>
+          <ion-icon name="call" item-start> {{InfoUser[2]}} </ion-icon>
+        </h2>
+        <h3>
+          <ion-icon name="at"> {{InfoUser[3]}} </ion-icon>
+        </h3>
+        <h3>
+            <ion-icon name="pin">
+               Lat: {{InfoUser[5].coordinates.latitude}}    Long:{{InfoUser[5].coordinates.longitude}} 
+            </ion-icon>
+            <p>
+                city: <ion-note >{{InfoUser[5].city}}</ion-note>
+                 
+            </p>
+            <p>
+                state: <ion-note >{{InfoUser[5].state}}</ion-note> 
+            </p>
+             <p>
+                street: <ion-note >{{InfoUser[5].street}}</ion-note> 
+            </p>
+        </h3>
+      </ion-label>
+    </ion-item>
+
+    <ion-item no-line>
+
+    </ion-item>
+
+  </ion-list>
+
+</ion-content>
