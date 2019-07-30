@@ -13,30 +13,30 @@
 <ion-content padding>
   <ion-list>
     <ion-item no-line text-center>
-      <ion-img [src]="InfoUser[1].large"></ion-img>
+      <ion-img [src]="InfoUser.picture.large"></ion-img>
     </ion-item>
     <ion-item no-line>
       <ion-label>
-        <h1>{{InfoUser[0].first| titlecase }} {{InfoUser[0].last | titlecase }}</h1>
+        <h1>{{InfoUser.name.first| titlecase }} {{InfoUser.name.last | titlecase }}</h1>
         <h2>
-          <ion-icon name="call" item-start> {{InfoUser[2]}} </ion-icon>
+          <ion-icon name="call" item-start> {{InfoUser.cell}} </ion-icon>
         </h2>
         <h3>
-          <ion-icon name="at"> {{InfoUser[3]}} </ion-icon>
+          <ion-icon name="at"> {{InfoUser.email}} </ion-icon>
         </h3>
         <h3>
             <ion-icon name="pin">
-               Lat: {{InfoUser[5].coordinates.latitude}}    Long:{{InfoUser[5].coordinates.longitude}} 
+               Lat: {{InfoUser.location.coordinates.latitude}}    Long:{{InfoUser.location.coordinates.longitude}} 
             </ion-icon>
             <p>
-                city: <ion-note >{{InfoUser[5].city}}</ion-note>
+                city: <ion-note >{{InfoUser.location.city}}</ion-note>
                  
             </p>
             <p>
-                state: <ion-note >{{InfoUser[5].state}}</ion-note> 
+                state: <ion-note >{{InfoUser.location.state}}</ion-note> 
             </p>
              <p>
-                street: <ion-note >{{InfoUser[5].street}}</ion-note> 
+                street: <ion-note >{{InfoUser.location.street}}</ion-note> 
             </p>
         </h3>
       </ion-label>
