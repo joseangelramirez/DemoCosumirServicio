@@ -12,12 +12,14 @@
  
 <ion-content fullscreen>
     <ion-content padding>
-        <ion-item (click)="MostrarInfo()">
+       <ion-list>
+        <ion-item *ngFor="let user of Users" (click)="MostrarInfo(user)">
           <ion-avatar item-start>
-            <img [src]="this.PirctureUser.large">
+            <img [src]="user.picture.large">
           </ion-avatar>
-          <h1>{{ this.InfoUser.first| titlecase }}  {{ this.InfoUser.last| titlecase }}</h1>
+          <h1>{{ user.name.first| titlecase }}  {{ user.name.last| titlecase }}</h1>
          
         </ion-item>
+       </ion-list>
       </ion-content>
 </ion-content>
